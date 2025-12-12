@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 function AddPersonForm(props) {
   const [ person, setPerson ] = useState("");
     
-   function handleChange(e) {
+  function handleChange(e) {
     setPerson(e.target.value);
   }
     
@@ -14,6 +14,7 @@ function AddPersonForm(props) {
     props.handleSubmit(person);
     setPerson("");
   }
+  
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" 
