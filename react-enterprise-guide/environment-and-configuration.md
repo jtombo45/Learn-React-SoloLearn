@@ -328,7 +328,7 @@ dist/
 2. Downloads packages listed in `dependencies` and `devDependencies`
 3. Stores them in `node_modules/`
 
-**Rule:** Never edit files in `node_modules/`. They're managed by npm.
+**Rule:** Never edit files in `node_modules/`. They are managed by npm.
 
 **Size:** Can be huge (hundreds of MB). That's normal.
 

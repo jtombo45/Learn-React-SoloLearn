@@ -14,7 +14,7 @@
 
 ### ❌ Don't
 
-- **Giant components** — if it's 200+ lines, split it
+- **Giant components** — if it's 200+ lines, split it up
 - **Generic names** — `Component`, `Wrapper`, `Container` (be specific)
 - **Duplicate logic** — extract to hooks or utilities
 - **Mix concerns** — UI, logic, and API calls in one component

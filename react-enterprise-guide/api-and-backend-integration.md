@@ -175,33 +175,33 @@ function ProductList() {
 **Get list:**
 ```jsx
 GET /api/products
-→ Returns: [{ id: 1, name: "..." }, ...]
+// Returns: [{ id: 1, name: "..." }, ...]
 ```
 
 **Get one:**
 ```jsx
 GET /api/products/1
-→ Returns: { id: 1, name: "..." }
+// Returns: { id: 1, name: "..." }
 ```
 
 **Create:**
 ```jsx
 POST /api/products
 Body: { name: "New Product" }
-→ Returns: { id: 2, name: "New Product" }
+// Returns: { id: 2, name: "New Product" }
 ```
 
 **Update:**
 ```jsx
 PUT /api/products/1
 Body: { name: "Updated Product" }
-→ Returns: { id: 1, name: "Updated Product" }
+// Returns: { id: 1, name: "Updated Product" }
 ```
 
 **Delete:**
 ```jsx
 DELETE /api/products/1
-→ Returns: 204 No Content (or success message)
+// Returns: 204 No Content (or success message)
 ```
 
 ## API Client Setup

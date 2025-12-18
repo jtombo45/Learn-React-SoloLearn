@@ -271,7 +271,7 @@ src/
 │       └── useDebounce.js
 ```
 
-**Rule:** If 2+ features use it, it's shared.
+**Rule:** If two or more features use it, it's shared.
 
 ## How to Orient Yourself in a New Repo
 
