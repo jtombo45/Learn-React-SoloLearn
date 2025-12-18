@@ -1,9 +1,9 @@
 # JSX
 
 - JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
-  - Allows HTML in JS and place them in DOM without any createElement() and or appendChild methods
-  - JSX convert HTML tags into react element
-  - Like Razor pages for frontend (writing frontend code using HTML and C# code)
+  - Allows HTML in JS and places them in DOM without any createElement() or appendChild() methods
+  - JSX converts HTML tags into React elements
+  - Similar to Razor pages for frontend (writing frontend code using HTML and C# code)
 - Sample Code:
 
 ```javascript
@@ -42,7 +42,11 @@ ReactDOM.render(
 - React DOM uses camelCase property naming convention instead of HTML attribute names. For example, class becomes className in JSX.
 
 ```javascript
-<div id="name"></div> // --> <div id={user.id}></div>
+// HTML attribute
+<div id="name"></div>
+
+// JSX attribute with expression
+<div id={user.id}></div>
 ```
 
 ## DOM: Document Object Model
@@ -92,12 +96,12 @@ setInterval(show, 1000);
 
 - Separation of concerns is a programming principle that states that each concern should be separated into individual pieces.
 - For example, in the diagram above, the "new question" button (2) should be clicked if a user wanted to add a new question, whereas the search bar (3) would be used if the user wanted to search the existing questions.
-- React has two types of components: functional and class
+- React has two types of components: functional and class components
 
 ### Components - Functional Components 
 
 - A functional component is a simple JavaScript function
-- The name of a functional component must begin with a capital or its treated as an HTML element instead of a component
+- The name of a functional component must begin with a capital letter or it's treated as an HTML element instead of a component
 
 ```javascript
 function Hello() {
@@ -287,7 +291,7 @@ function Hello() {
 }
 ```
 
-  - the square brackets is called array destructuring, it assigns the following:
+  - The square brackets are called array destructuring, which assigns the following:
     - the first argument (name) is the state variable
     - the second argument (setName) is the setter function
 - You can create multiple state variables with their corresponding set methods. Just use separate statements for each variable using the useState hook.
@@ -558,7 +562,7 @@ const listItems = arr.map((val, index) =>
 
 ## Contact Manager
 ![alt text](image-3.png)
-- Base off the mockup it make sense to have two components
+- Based on the mockup, it makes sense to have two components
   - AddPersonForm: a form with the text field and Add button.
   - PeopleList: a list of contacts.
 ```
@@ -608,7 +612,7 @@ const el = (
 
 ## Contact Manager - Sharing State
 - AddPersonForm independently keeps its state, in order to add new contact to our PeopleList we need to share the state between the components
-- We need a parents components the include the child component and holds the contact list state
+- We need a parent component that includes the child components and holds the contact list state
 ```
 function ContactManager(props) {
   const [contacts, setContacts] = useState(props.data);
@@ -632,12 +636,12 @@ function ContactManager(props) {
   const [contacts, setContacts] = useState(props.data);
 
   function addPerson(name) {
-    setContacts([...contacts, name]); // [...<variable>, name] is way you can append a array with the 2nd arguement
+    setContacts([...contacts, name]); // [...<variable>, name] is the way you can append to an array with the 2nd argument
   }
  ...
 }
 ```
-- We need to able to call the addPerson() function from our parent component to add a new person to our contacts state array:
+- We need to be able to call the addPerson() function from our parent component to add a new person to our contacts state array:
   - We pass the function as a prop 
 ```
 function ContactManager(props) {
@@ -681,5 +685,5 @@ function AddPersonForm(props) {
 ```
 - We also clear the value of the text field using setPerson('') after adding a new person.
 
-Contact Manager - Summary
-- Props can be used to pass down not only state, but also functions, that may manipulate the state.
+## Contact Manager - Summary
+- Props can be used to pass down not only state, but also functions that may manipulate the state.
